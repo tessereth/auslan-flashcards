@@ -6,7 +6,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -18,5 +18,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/',
+      },
+    },
   ],
 }

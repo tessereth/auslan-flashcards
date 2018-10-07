@@ -1,0 +1,25 @@
+- id: little_words
+  words:
+    - id: same
+    - id: different
+    - id: again
+    - id: maybe
+      title: 'maybe/or'
+    - id: too-much
+      title: 'lots/too much'
+    - id: but
+    - id: for
+    - id: go
+    - id: come
+    - id: with
+- id: question_words
+  words:
+    - id: who
+    - id: what
+    - id: where
+    - id: when
+    - id: why
+    - id: how
+    - id: 'how much'
+    - id: 'how many'
+    - id: which

@@ -16,12 +16,13 @@ const VideoCard = ({ word, mediaRef }) => {
     playbackRates: [0.25, 0.5, 1.0, 1.5],
     controlBar: { volumeMenuButton: false }
   }
+  const mediaPath = `http://media.auslan.org.au/mp4video/${mediaRef.slice(0, 2)}/${mediaRef}`
   return (
     <div className="box">
       <div className="flashcard flashcard--video">
-        <video id={`flashcard-video-${word}`} preload="metadata" className="video-js vjs-fill" controls
-               poster={`http://media.auslan.org.au/mp4video/${mediaRef}.jpg`} data-setup={JSON.stringify(setup)}>
-          <source src={`http://media.auslan.org.au/mp4video/${mediaRef}.mp4`} type="video/mp4"/>
+        <video id={`flashcard-video-${word}`} preload="metadata" className="video-js vjs-fill" controls muted
+               poster={`${mediaPath}.jpg`} data-setup={JSON.stringify(setup)}>
+          <source src={`${mediaPath}.mp4`} type="video/mp4"/>
           <p className="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading to a web browser that
             <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener noreferrer">supports HTML5 video</a>
