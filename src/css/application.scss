@@ -1,0 +1,25 @@
+$tablet: 769px;
+
+.flashcard {
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (min-width: $tablet) {
+        width: 320px;
+        height: 240px;
+    }
+}
+
+.flashcard--video {
+    max-width: 320px;
+    max-height: 240px;
+}
+
+.box--action {
+    cursor: pointer;
+    transition: box-shadow .3s;
+
+    :hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+    }
+}

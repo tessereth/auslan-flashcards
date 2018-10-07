@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import PrimaryNav from './primary-nav'
 import "bulma/css/bulma.css"
+import '../css/application.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery

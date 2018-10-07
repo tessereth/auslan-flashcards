@@ -27,8 +27,8 @@ const IndexPage = () => (
           </div>
           <div className="level-right">
             <div className="buttons">
-            <Link to="/flashcard" className="button">Ordered</Link>
-            <Link to="/flashcard" className="button">Random</Link>
+            <Link to="/flashcard" className="button">Guess sign</Link>
+            <Link to="/flashcard" className="button">Guess word</Link>
             </div>
           </div>
         </div>
@@ -40,8 +40,8 @@ const IndexPage = () => (
           </div>
           <div className="level-right">
             <div className="buttons">
-              <Link to="/flashcard" className="button">Ordered</Link>
-              <Link to="/flashcard" className="button">Random</Link>
+              <Link to="/flashcard" className="button">Guess sign</Link>
+              <Link to="/flashcard" className="button">Guess word</Link>
             </div>
           </div>
         </div>
