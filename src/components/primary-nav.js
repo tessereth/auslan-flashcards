@@ -43,7 +43,7 @@ class PrimaryNav extends PureComponent {
               </Link>
             </div>
             <div className="navbar-end">
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="#">
                 Contact
               </Link>
             </div>

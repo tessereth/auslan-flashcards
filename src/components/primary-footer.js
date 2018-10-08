@@ -14,8 +14,7 @@ const PrimaryFooter = () => (
         </a>
       </p>
       <p>
-        Website &mdash; &copy; 2018 Teresa Bradbury &mdash; licenced
-        under TBA
+        Website &mdash; &copy; 2018 Teresa Bradbury &mdash; licenced under TBA
       </p>
     </div>
   </footer>
