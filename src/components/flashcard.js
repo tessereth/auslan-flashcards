@@ -51,9 +51,11 @@ const VideoCard = ({ word, mediaRef }) => {
 }
 
 const HiddenCard = ({ reveal }) => (
-  <a href="#" className="box" onClick={reveal}>
+  // We need this to be an <a> for bulma to style it properly
+  // eslint-disable-next-line jsx-a11y/anchor-is-valid
+  <a href="#" role="button" className="box" onClick={reveal}>
     <div className="flashcard">
-      <p>Click to reveal</p>
+      <p>Reveal</p>
     </div>
   </a>
 )

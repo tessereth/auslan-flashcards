@@ -10,6 +10,7 @@ class PrimaryNav extends PureComponent {
     })
   }
 
+  // We need the hamburger menu button to be an <a> for bulma to style it properly
   render() {
     return (
       <nav className="navbar has-shadow">
@@ -18,6 +19,7 @@ class PrimaryNav extends PureComponent {
             <Link to="/" className="navbar-item">
               Auslan flashcards
             </Link>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a
               role="button"
               className={`navbar-burger ${
