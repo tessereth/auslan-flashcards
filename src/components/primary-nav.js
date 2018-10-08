@@ -1,12 +1,12 @@
-import React, { PureComponent } from "react"
-import { Link } from "gatsby"
+import React, { PureComponent } from 'react'
+import { Link } from 'gatsby'
 
 class PrimaryNav extends PureComponent {
   state = { menuOpen: false }
 
   toggleMenu = () => {
     this.setState({
-      menuOpen: !this.state.menuOpen
+      menuOpen: !this.state.menuOpen,
     })
   }
 
@@ -21,7 +21,7 @@ class PrimaryNav extends PureComponent {
             <a
               role="button"
               className={`navbar-burger ${
-                this.state.menuOpen ? "is-active" : ""
+                this.state.menuOpen ? 'is-active' : ''
               }`}
               aria-label="menu"
               aria-expanded={this.state.menuOpen}
@@ -33,7 +33,7 @@ class PrimaryNav extends PureComponent {
             </a>
           </div>
           <div
-            className={`navbar-menu ${this.state.menuOpen ? "is-active" : ""}`}
+            className={`navbar-menu ${this.state.menuOpen ? 'is-active' : ''}`}
           >
             <div className="navbar-start">
               <Link to="/decks" className="navbar-item">

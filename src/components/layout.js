@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import PrimaryNav from './primary-nav'
-import "bulma/css/bulma.css"
+import 'bulma/css/bulma.css'
 import '../css/application.scss'
 
 const Layout = ({ children }) => (
@@ -30,9 +30,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <PrimaryNav />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
       </>
     )}
   />

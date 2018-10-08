@@ -14,18 +14,35 @@ const WordCard = ({ word }) => (
 const VideoCard = ({ word, mediaRef }) => {
   const setup = {
     playbackRates: [0.25, 0.5, 1.0, 1.5],
-    controlBar: { volumeMenuButton: false }
+    controlBar: { volumeMenuButton: false },
   }
-  const mediaPath = `http://media.auslan.org.au/mp4video/${mediaRef.slice(0, 2)}/${mediaRef}`
+  const mediaPath = `http://media.auslan.org.au/mp4video/${mediaRef.slice(
+    0,
+    2
+  )}/${mediaRef}`
   return (
     <div className="box">
       <div className="flashcard flashcard--video">
-        <video id={`flashcard-video-${word}`} preload="metadata" className="video-js vjs-fill" controls muted
-               poster={`${mediaPath}.jpg`} data-setup={JSON.stringify(setup)}>
-          <source src={`${mediaPath}.mp4`} type="video/mp4"/>
+        <video
+          id={`flashcard-video-${word}`}
+          preload="metadata"
+          className="video-js vjs-fill"
+          controls
+          muted
+          poster={`${mediaPath}.jpg`}
+          data-setup={JSON.stringify(setup)}
+        >
+          <source src={`${mediaPath}.mp4`} type="video/mp4" />
           <p className="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener noreferrer">supports HTML5 video</a>
+            To view this video please enable JavaScript, and consider upgrading
+            to a web browser that
+            <a
+              href="https://videojs.com/html5-video-support/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              supports HTML5 video
+            </a>
           </p>
         </video>
       </div>
@@ -47,7 +64,7 @@ class Flashcard extends React.PureComponent {
   reveal = e => {
     e.preventDefault()
     this.setState({
-      revealed: true
+      revealed: true,
     })
   }
 
@@ -56,14 +73,22 @@ class Flashcard extends React.PureComponent {
     return (
       <div className="columns">
         <div className="column is-centered">
-          {wordFirst ? <WordCard word={word} /> : <VideoCard word={word} mediaRef={mediaRef} />}
+          {wordFirst ? (
+            <WordCard word={word} />
+          ) : (
+            <VideoCard word={word} mediaRef={mediaRef} />
+          )}
         </div>
         <div className="column is-centered">
-          {this.state.revealed ?
-            (wordFirst ?
-              <VideoCard word={word} mediaRef={mediaRef} /> :
-              <WordCard word={word} />) :
-            <HiddenCard reveal={this.reveal} />}
+          {this.state.revealed ? (
+            wordFirst ? (
+              <VideoCard word={word} mediaRef={mediaRef} />
+            ) : (
+              <WordCard word={word} />
+            )
+          ) : (
+            <HiddenCard reveal={this.reveal} />
+          )}
         </div>
       </div>
     )
@@ -73,7 +98,7 @@ class Flashcard extends React.PureComponent {
 Flashcard.propTypes = {
   word: PropTypes.string.isRequired,
   mediaRef: PropTypes.string.isRequired,
-  wordFirst: PropTypes.bool
+  wordFirst: PropTypes.bool,
 }
 
 export default Flashcard

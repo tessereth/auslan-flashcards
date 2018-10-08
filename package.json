@@ -5,6 +5,8 @@
   "author": "Tessa Bradbury",
   "dependencies": {
     "bulma": "^0.7.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-offline": "^2.0.5",
@@ -34,5 +36,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tessereth/auslan-flashcards"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:prettier/recommended",
+      "react-app"
+    ]
   }
 }

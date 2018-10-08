@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'auslan-flashcards',
+        short_name: 'flashcards',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
