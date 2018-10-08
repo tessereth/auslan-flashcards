@@ -11,15 +11,21 @@ const WordCard = ({ word }) => (
   </div>
 )
 
+const mediaPath = mediaRef => {
+  let base
+  if (mediaRef.slice(-2) === '_1') {
+    base = 'http://media.auslan.org.au/mp4video'
+  } else {
+    base = 'http://media.auslan.org.au/auslan'
+  }
+  return `${base}/${mediaRef.slice(0, 2)}/${mediaRef}`
+}
+
 const VideoCard = ({ word, mediaRef }) => {
   const setup = {
     playbackRates: [0.25, 0.5, 1.0, 1.5],
     controlBar: { volumeMenuButton: false },
   }
-  const mediaPath = `http://media.auslan.org.au/mp4video/${mediaRef.slice(
-    0,
-    2
-  )}/${mediaRef}`
   return (
     <div className="box">
       <div className="flashcard flashcard--video">
@@ -29,10 +35,10 @@ const VideoCard = ({ word, mediaRef }) => {
           className="video-js vjs-fill"
           controls
           muted
-          poster={`${mediaPath}.jpg`}
+          poster={`${mediaPath(mediaRef)}.jpg`}
           data-setup={JSON.stringify(setup)}
         >
-          <source src={`${mediaPath}.mp4`} type="video/mp4" />
+          <source src={`${mediaPath(mediaRef)}.mp4`} type="video/mp4" />
           <p className="vjs-no-js">
             To view this video please enable JavaScript, and consider upgrading
             to a web browser that
@@ -60,47 +66,37 @@ const HiddenCard = ({ reveal }) => (
   </a>
 )
 
-class Flashcard extends React.PureComponent {
-  state = { revealed: false }
-
-  reveal = e => {
-    e.preventDefault()
-    this.setState({
-      revealed: true,
-    })
-  }
-
-  render() {
-    const { word, mediaRef, wordFirst } = this.props
-    return (
-      <div className="columns">
-        <div className="column is-centered">
-          {wordFirst ? (
-            <WordCard word={word} />
-          ) : (
-            <VideoCard word={word} mediaRef={mediaRef} />
-          )}
-        </div>
-        <div className="column is-centered">
-          {this.state.revealed ? (
-            wordFirst ? (
-              <VideoCard word={word} mediaRef={mediaRef} />
-            ) : (
-              <WordCard word={word} />
-            )
-          ) : (
-            <HiddenCard reveal={this.reveal} />
-          )}
-        </div>
+const Flashcard = ({ word, mediaRef, wordFirst, revealed, reveal }) => {
+  return (
+    <div className="columns">
+      <div className="column is-centered">
+        {wordFirst ? (
+          <WordCard word={word} />
+        ) : (
+          <VideoCard word={word} mediaRef={mediaRef} />
+        )}
       </div>
-    )
-  }
+      <div className="column is-centered">
+        {revealed ? (
+          wordFirst ? (
+            <VideoCard word={word} mediaRef={mediaRef} />
+          ) : (
+            <WordCard word={word} />
+          )
+        ) : (
+          <HiddenCard reveal={reveal} />
+        )}
+      </div>
+    </div>
+  )
 }
 
 Flashcard.propTypes = {
   word: PropTypes.string.isRequired,
   mediaRef: PropTypes.string.isRequired,
   wordFirst: PropTypes.bool,
+  revealed: PropTypes.bool,
+  reveal: PropTypes.func.isRequired,
 }
 
 export default Flashcard

@@ -19,15 +19,31 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+
+  const createFor = (slug, idx, guess) => {
+    createPage({
+      path: slug + '/' + guess + '/' + (idx + 1),
+      component: path.resolve('./src/templates/flashcards.js'),
+      context: {
+        slug: slug,
+        idx: idx,
+        number: idx + 1,
+        guess: guess,
+      },
+    })
+  }
+
   return new Promise((resolve, reject) => {
     graphql(`
       {
         allDecksYaml {
           edges {
             node {
-              id
               fields {
                 slug
+              }
+              words {
+                id
               }
             }
           }
@@ -35,25 +51,9 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allDecksYaml.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug + '/word',
-          component: path.resolve('./src/templates/flashcards.js'),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-            wordFirst: false,
-          },
-        })
-        createPage({
-          path: node.fields.slug + '/sign',
-          component: path.resolve('./src/templates/flashcards.js'),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-            wordFirst: true,
-          },
+        node.words.forEach((_, idx) => {
+          createFor(node.fields.slug, idx, 'word')
+          createFor(node.fields.slug, idx, 'sign')
         })
       })
       resolve()

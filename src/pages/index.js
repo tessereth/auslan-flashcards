@@ -27,13 +27,13 @@ const IndexPage = ({ data }) => {
                 <div className="level-right">
                   <div className="buttons">
                     <Link
-                      to={deck.node.fields.slug + '/sign'}
+                      to={deck.node.fields.slug + '/sign/1'}
                       className="button"
                     >
                       Guess sign
                     </Link>
                     <Link
-                      to={deck.node.fields.slug + '/word'}
+                      to={deck.node.fields.slug + '/word/1'}
                       className="button"
                     >
                       Guess word

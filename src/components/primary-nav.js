@@ -38,7 +38,7 @@ class PrimaryNav extends PureComponent {
             className={`navbar-menu ${this.state.menuOpen ? 'is-active' : ''}`}
           >
             <div className="navbar-start">
-              <Link to="/decks" className="navbar-item">
+              <Link to="/" className="navbar-item">
                 Decks
               </Link>
             </div>
