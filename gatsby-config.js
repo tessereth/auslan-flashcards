@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Auslan flashcards',
   },
+  pathPrefix: '/auslan-flashcards',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
