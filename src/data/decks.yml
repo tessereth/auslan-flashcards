@@ -1,4 +1,4 @@
-- id: little_words
+- name: Little words
   words:
     - id: same
       video: '9930_1'
@@ -33,7 +33,7 @@
     - id: with
       video: '37230'
       web: http://www.auslan.org.au/dictionary/words/with-2.html
-- id: question_words
+- name: Question words
   words:
     - id: who
     - id: what

@@ -26,8 +26,8 @@ const SecondPage = ({ data }) => {
 export default SecondPage
 
 export const query = graphql`
-  query {
-    decksYaml(id: { eq: "little_words" }) {
+  query($slug: String!) {
+    decksYaml(fields: { slug: { eq: $slug } }) {
       words {
         id
         title
