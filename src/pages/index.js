@@ -17,25 +17,33 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="section container">
-        <h2 className="subtitle">Choose a deck</h2>
-        {data.allDecksYaml.edges.map(deck => (
-          <div key={deck.node.fields.slug} className="box">
-            <div className="level">
-              <div className="level-left">{deck.node.name}</div>
-              <div className="level-right">
-                <div className="buttons">
-                  <Link to={deck.node.fields.slug + '/sign'} className="button">
-                    Guess sign
-                  </Link>
-                  <Link to={deck.node.fields.slug + '/word'} className="button">
-                    Guess word
-                  </Link>
+      <section className="section">
+        <div className="container">
+          <h2 className="subtitle">Choose a deck</h2>
+          {data.allDecksYaml.edges.map(deck => (
+            <div key={deck.node.fields.slug} className="box">
+              <div className="level">
+                <div className="level-left">{deck.node.name}</div>
+                <div className="level-right">
+                  <div className="buttons">
+                    <Link
+                      to={deck.node.fields.slug + '/sign'}
+                      className="button"
+                    >
+                      Guess sign
+                    </Link>
+                    <Link
+                      to={deck.node.fields.slug + '/word'}
+                      className="button"
+                    >
+                      Guess word
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
     </Layout>
   )
