@@ -36,13 +36,29 @@
 - name: Question words
   words:
     - id: who
+      video: '6950_1'
+      web: http://www.auslan.org.au/dictionary/words/who-1.html
     - id: what
+      video: '7300_1'
+      web: http://www.auslan.org.au/dictionary/words/what-1.html
     - id: where
+      video: '27810_1'
+      web: http://www.auslan.org.au/dictionary/words/where-1.html
     - id: when
+      video: '24560_1'
+      web: http://www.auslan.org.au/dictionary/words/when-1.html
     - id: why
       video: '51490_1'
-      web: http://www.auslan.org.au/dictionary/words/because-4.html
+      web: http://www.auslan.org.au/dictionary/words/why-1.html
     - id: how
+      video: '42501_1'
+      web: http://www.auslan.org.au/dictionary/words/how-2.html
     - id: 'how much'
+      video: '24640_1'
+      web: http://www.auslan.org.au/dictionary/words/how%20much-1.html
     - id: 'how many'
+      video: '24960_1'
+      web: http://www.auslan.org.au/dictionary/words/how%20many-1.html
     - id: which
+      video: '66090'
+      web: http://www.auslan.org.au/dictionary/words/which-3.html
