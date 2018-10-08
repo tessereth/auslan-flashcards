@@ -36,12 +36,23 @@ exports.createPages = ({ graphql, actions }) => {
     `).then(result => {
       result.data.allDecksYaml.edges.forEach(({ node }) => {
         createPage({
-          path: node.fields.slug,
+          path: node.fields.slug + '/word',
           component: path.resolve('./src/templates/flashcards.js'),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
             slug: node.fields.slug,
+            wordFirst: false,
+          },
+        })
+        createPage({
+          path: node.fields.slug + '/sign',
+          component: path.resolve('./src/templates/flashcards.js'),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.fields.slug,
+            wordFirst: true,
           },
         })
       })

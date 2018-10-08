@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Flashcard from '../components/flashcard'
 
-const SecondPage = ({ data }) => {
+const SecondPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <section className="section">
@@ -14,7 +14,7 @@ const SecondPage = ({ data }) => {
               key={word.id}
               word={word.title || word.id}
               mediaRef={word.video}
-              wordFirst
+              wordFirst={pageContext.wordFirst}
             />
           ))}
         </div>
