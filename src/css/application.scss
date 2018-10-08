@@ -1,25 +1,57 @@
-$tablet: 769px;
+@import '~bulma/bulma.sass';
+
+$card-max-width: 20rem;
+$card-max-height: 15rem;
+$title-padding-top: ($card-max-height - $title-size * $title-line-height) / 2 - 0.25rem;
+$subtitle-padding-top: ($card-max-height - $subtitle-size * $subtitle-line-height) / 2 - 0.25rem;
 
 .flashcard {
-    margin-left: auto;
-    margin-right: auto;
-    
-    @media (min-width: $tablet) {
-        width: 320px;
-        height: 240px;
-    }
+  @extend .box;
+
+  width: 100%;
 }
 
-.flashcard--video {
-    max-width: 320px;
-    max-height: 240px;
+.flashcard--hidden {
+  background-color: $background;
 }
 
-.box--action {
-    cursor: pointer;
-    transition: box-shadow .3s;
+.flashcard__content {
+  margin-left: auto;
+  margin-right: auto;
 
-    :hover {
-        box-shadow: 0 0 11px rgba(33,33,33,.2);
-    }
+  @media (min-width: $tablet) {
+    width: $card-max-width;
+    height: $card-max-height;
+  }
+}
+
+.flashcard__content--video {
+  max-width: $card-max-width;
+  max-height: $card-max-height;
+}
+
+.flashcard__content--word {
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    padding-top: $title-padding-top;
+  }
+}
+
+$diff-title-subtitle-size: ($title-size * $title-line-height) - ($subtitle-size * $subtitle-line-height);
+
+.flashcard__content--hidden {
+  padding-top: $diff-title-subtitle-size / 2;
+  padding-bottom: $diff-title-subtitle-size / 2;
+
+  @media (min-width: $tablet) {
+    padding-top: $subtitle-padding-top;
+    padding-bottom: 0;
+  }
+}
+
+button.box {
+  @extend a.box;
+
+  border-width: 0;
 }

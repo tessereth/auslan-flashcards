@@ -4,8 +4,8 @@ import 'video.js'
 import 'video.js/dist/video-js.css'
 
 const WordCard = ({ word }) => (
-  <div className="box has-text-centered" style={{ height: '100%' }}>
-    <div className="flashcard">
+  <div className="flashcard">
+    <div className="flashcard__content flashcard__content--word">
       <h1 className="title">{word.title || word.id}</h1>
     </div>
   </div>
@@ -27,8 +27,8 @@ const VideoCard = ({ word }) => {
     controlBar: { volumeMenuButton: false },
   }
   return (
-    <div className="box">
-      <div className="flashcard flashcard--video">
+    <div className="flashcard">
+      <div className="flashcard__content flashcard__content--video">
         <video
           id={`flashcard-video-${word.id}`}
           preload="metadata"
@@ -57,13 +57,11 @@ const VideoCard = ({ word }) => {
 }
 
 const HiddenCard = ({ reveal }) => (
-  // We need this to be an <a> for bulma to style it properly
-  // eslint-disable-next-line jsx-a11y/anchor-is-valid
-  <a href="#" role="button" className="box" onClick={reveal}>
-    <div className="flashcard">
-      <p>Reveal</p>
+  <button className="flashcard flashcard--hidden" onClick={reveal}>
+    <div className="flashcard__content flashcard__content--hidden">
+      <p className="subtitle">Reveal</p>
     </div>
-  </a>
+  </button>
 )
 
 const Flashcard = ({ word, wordFirst, revealed, reveal }) => {

@@ -85,7 +85,7 @@ class FlashcardScene extends React.PureComponent {
               reveal={this.reveal}
               revealed={this.state.revealed}
             />
-            <div className="level">
+            <div className="level is-mobile">
               <div className="level-left">
                 <button
                   className="button"
