@@ -8,44 +8,68 @@ class FlashcardScene extends React.PureComponent {
   state = { revealed: false }
 
   reveal = e => {
-    e.preventDefault()
+    if (e) e.preventDefault()
     this.setState({
       revealed: true,
     })
   }
 
   unreveal = e => {
-    e.preventDefault()
+    if (e) e.preventDefault()
     this.setState({
       revealed: false,
     })
   }
 
-  next = e => {
-    if (this.last()) {
-      navigate('/')
-    } else if (this.state.revealed) {
-      const { slug, guess, number } = this.props.pageContext
-      navigate(`/${slug}/${guess}/${number + 1}`)
+  previous = () => {
+    const { slug, guess, number } = this.props.pageContext
+    navigate(`/${slug}/${guess}/${number - 1}`)
+  }
+
+  next = () => {
+    const { slug, guess, number } = this.props.pageContext
+    navigate(`/${slug}/${guess}/${number + 1}`)
+  }
+
+  right = e => {
+    if (this.state.revealed) {
+      this.next(e)
     } else {
       this.reveal(e)
     }
   }
 
-  previous = e => {
+  left = e => {
     if (this.state.revealed) {
       this.unreveal(e)
     } else {
-      const { slug, guess, number } = this.props.pageContext
-      navigate(`/${slug}/${guess}/${number - 1}`)
+      this.previous(e)
     }
   }
 
-  first = () => this.props.pageContext.idx === 0 && !this.state.revealed
+  isFirst = () => this.props.pageContext.idx === 0
 
-  last = () =>
-    this.props.pageContext.idx === this.props.data.decksYaml.words.length - 1 &&
-    this.state.revealed
+  isLast = () =>
+    this.props.pageContext.idx === this.props.data.decksYaml.words.length - 1
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDownNative)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDownNative)
+  }
+
+  onKeyDownNative = e => {
+    if (e.key === 'ArrowLeft' && !(this.isFirst() && !this.state.revealed)) {
+      this.left()
+    } else if (
+      e.key === 'ArrowRight' &&
+      !(this.isLast() && this.state.revealed)
+    ) {
+      this.right()
+    }
+  }
 
   render() {
     const { data, pageContext } = this.props
@@ -56,8 +80,7 @@ class FlashcardScene extends React.PureComponent {
           <div className="container">
             <Flashcard
               key={word.id}
-              word={word.title || word.id}
-              mediaRef={word.video}
+              word={word}
               wordFirst={pageContext.guess === 'sign'}
               reveal={this.reveal}
               revealed={this.state.revealed}
@@ -67,15 +90,24 @@ class FlashcardScene extends React.PureComponent {
                 <button
                   className="button"
                   onClick={this.previous}
-                  disabled={this.first()}
+                  disabled={this.isFirst()}
                 >
                   Previous
                 </button>
               </div>
               <div className="level-right">
-                <button className="button is-primary" onClick={this.next}>
-                  {this.last() ? 'Done!' : 'Next'}
-                </button>
+                {this.isLast() ? (
+                  <button
+                    className="button is-success"
+                    onClick={() => navigate('/')}
+                  >
+                    Done!
+                  </button>
+                ) : (
+                  <button className="button is-info" onClick={this.next}>
+                    Next
+                  </button>
+                )}
               </div>
             </div>
           </div>

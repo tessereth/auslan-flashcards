@@ -38,6 +38,7 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  onKeyDown: PropTypes.func,
 }
 
 export default Layout
