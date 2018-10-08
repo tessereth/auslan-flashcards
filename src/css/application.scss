@@ -55,3 +55,17 @@ button.box {
 
   border-width: 0;
 }
+
+.everything {
+  height: 100vh;
+}
+.everything {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}

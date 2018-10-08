@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import PrimaryNav from './primary-nav'
+import PrimaryFooter from './primary-footer'
 import '../css/application.scss'
 
 const Layout = ({ children }) => (
@@ -28,8 +29,13 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <PrimaryNav />
-        <main>{children}</main>
+        <div className="everything">
+          <div className="content">
+            <PrimaryNav />
+            <main>{children}</main>
+          </div>
+          <PrimaryFooter />
+        </div>
       </>
     )}
   />
@@ -37,7 +43,6 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  onKeyDown: PropTypes.func,
 }
 
 export default Layout
