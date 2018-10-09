@@ -1,4 +1,5 @@
 @import '~bulma/bulma.sass';
+@import '~video.js/dist/video-js.css';
 
 $card-max-width: 20rem;
 $card-max-height: 15rem;
@@ -11,8 +12,12 @@ $subtitle-padding-top: ($card-max-height - $subtitle-size * $subtitle-line-heigh
   width: 100%;
 }
 
-.flashcard--hidden {
+.flashcard--reveal {
   background-color: $background;
+}
+
+.flashcard--hidden {
+  display: none;
 }
 
 .flashcard__content {
@@ -40,7 +45,7 @@ $subtitle-padding-top: ($card-max-height - $subtitle-size * $subtitle-line-heigh
 
 $diff-title-subtitle-size: ($title-size * $title-line-height) - ($subtitle-size * $subtitle-line-height);
 
-.flashcard__content--hidden {
+.flashcard__content--reveal {
   padding-top: $diff-title-subtitle-size / 2;
   padding-bottom: $diff-title-subtitle-size / 2;
 
