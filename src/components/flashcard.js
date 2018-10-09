@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import VideoCard from './video-card'
 
-const WordCard = ({ word }) => (
-  <div className="flashcard">
+const WordCard = ({ word, revealed }) => (
+  <div className={classnames('flashcard', { 'flashcard--hidden': !revealed })}>
     <div className="flashcard__content flashcard__content--word">
       <h1 className="title">{word.title || word.id}</h1>
     </div>
@@ -22,18 +23,19 @@ const Flashcard = ({ word, wordFirst, revealed, reveal }) => {
   return (
     <div className="columns">
       <div className="column is-centered">
-        {wordFirst ? <WordCard word={word} /> : <VideoCard word={word} />}
+        {wordFirst ? (
+          <WordCard word={word} revealed />
+        ) : (
+          <VideoCard word={word} revealed />
+        )}
       </div>
       <div className="column is-centered">
-        {revealed ? (
-          wordFirst ? (
-            <VideoCard word={word} />
-          ) : (
-            <WordCard word={word} />
-          )
+        {wordFirst ? (
+          <VideoCard word={word} revealed={revealed} />
         ) : (
-          <HiddenCard reveal={reveal} />
+          <WordCard word={word} revealed={revealed} />
         )}
+        {!revealed && <HiddenCard reveal={reveal} />}
       </div>
     </div>
   )

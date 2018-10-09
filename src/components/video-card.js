@@ -1,5 +1,6 @@
 import React from 'react'
 import videojs from 'video.js'
+import classnames from 'classnames'
 
 const mediaPath = mediaRef => {
   let base
@@ -14,9 +15,7 @@ const mediaPath = mediaRef => {
 class VideoCard extends React.PureComponent {
   vjsDefaultOptions = {
     playbackRates: [0.25, 0.5, 1.0, 1.5],
-    controlBar: { volumeMenuButton: false },
     preload: 'auto',
-    autoplay: true,
     loop: true,
     controls: true,
     muted: true,
@@ -37,16 +36,29 @@ class VideoCard extends React.PureComponent {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.revealed !== this.props.revealed) {
+      if (this.props.revealed) {
+        this.player.play()
+      } else {
+        this.player.pause()
+      }
+    }
+  }
+
   render() {
-    const { word } = this.props
+    const { word, revealed } = this.props
     return (
-      <div className="flashcard">
+      <div
+        className={classnames('flashcard', { 'flashcard--hidden': !revealed })}
+      >
         <div className="flashcard__content flashcard__content--video">
           <video
             id={`flashcard-video-${word.id}`}
             className="video-js vjs-fill"
             poster={`${mediaPath(word.video)}.jpg`}
             ref={this.videoRef}
+            autoPlay={revealed}
           >
             <source src={`${mediaPath(word.video)}.mp4`} type="video/mp4" />
             <p className="vjs-no-js">
