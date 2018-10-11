@@ -1,28 +1,25 @@
 import React from 'react'
+import ExternalLink from './external-link'
 
 const PrimaryFooter = () => (
   <footer className="footer af-footer">
     <div className="container">
       <p>
-        All videos &mdash; &copy;{' '}
-        <a
-          href="http://www.auslan.org.au/"
-          target="_blank"
-          rel="noopener noreferrer external"
-        >
+        Videos &mdash; &copy;{' '}
+        <ExternalLink href="http://www.auslan.org.au/">
           Auslan Signbank
-        </a>
+        </ExternalLink>{' '}
+        &mdash; licenced{' '}
+        <ExternalLink href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+          Creative Commons BY-NC-ND 4.0
+        </ExternalLink>
       </p>
       <p>
         Website and source code &mdash; &copy; 2018 Teresa Bradbury &mdash;
         licenced{' '}
-        <a
-          href="https://github.com/tessereth/auslan-flashcards/blob/master/LICENSE"
-          target="_blank"
-          rel="noopener noreferrer external"
-        >
+        <ExternalLink href="https://github.com/tessereth/auslan-flashcards/blob/master/LICENSE">
           MIT
-        </a>
+        </ExternalLink>
       </p>
     </div>
   </footer>

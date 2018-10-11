@@ -1,12 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import VideoCard from './video-card'
+import Video from './video'
 
 const WordCard = ({ word, revealed }) => (
   <div className={classnames('flashcard', { 'flashcard--hidden': !revealed })}>
     <div className="flashcard__content flashcard__content--word">
       <h1 className="title">{word.title || word.id}</h1>
+    </div>
+  </div>
+)
+
+const VideoCard = ({ word, revealed }) => (
+  <div className={classnames('flashcard', { 'flashcard--hidden': !revealed })}>
+    <div className="flashcard__content flashcard__content--video">
+      <Video word={word} revealed={revealed} />
     </div>
   </div>
 )

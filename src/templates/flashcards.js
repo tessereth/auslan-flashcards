@@ -76,6 +76,13 @@ class FlashcardScene extends React.PureComponent {
     const word = data.decksYaml.words[pageContext.idx]
     return (
       <Layout>
+        <section className="hero is-primary is-small">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">{data.decksYaml.name}</h1>
+            </div>
+          </div>
+        </section>
         <section className="section">
           <div className="container">
             <Flashcard
@@ -123,6 +130,7 @@ export default FlashcardScene
 export const query = graphql`
   query($slug: String!) {
     decksYaml(fields: { slug: { eq: $slug } }) {
+      name
       words {
         id
         title

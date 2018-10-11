@@ -81,12 +81,10 @@ button.box {
 }
 
 // links in a hero
-.hero.is-primary {
-  a {
-    text-decoration: underline;
+a.af-hero-link {
+  text-decoration: underline;
 
-    &:hover {
-      color: $grey-lighter !important;
-    }
+  &:hover {
+    color: $grey-lighter !important;
   }
 }

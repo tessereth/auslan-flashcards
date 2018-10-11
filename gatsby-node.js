@@ -51,9 +51,15 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allDecksYaml.edges.forEach(({ node }) => {
+        const slug = node.fields.slug
+        createPage({
+          path: slug,
+          component: path.resolve('./src/templates/deck.js'),
+          context: { slug },
+        })
         node.words.forEach((_, idx) => {
-          createFor(node.fields.slug, idx, 'word')
-          createFor(node.fields.slug, idx, 'sign')
+          createFor(slug, idx, 'word')
+          createFor(slug, idx, 'sign')
         })
       })
       resolve()

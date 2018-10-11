@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import ExternalLink from '../components/external-link'
 
 const IndexPage = ({ data }) => {
   return (
@@ -12,13 +13,12 @@ const IndexPage = ({ data }) => {
             <h1 className="title is-size-1">Auslan flashcards</h1>
             <p className="subtitle is-size-4">
               Practice your signing using videos from the{' '}
-              <a
+              <ExternalLink
                 href="http://www.auslan.org.au/"
-                target="_blank"
-                rel="noopener noreferrer external"
+                className="af-hero-link"
               >
                 Auslan signbank
-              </a>
+              </ExternalLink>
             </p>
           </div>
         </div>
@@ -43,6 +43,9 @@ const IndexPage = ({ data }) => {
                       className="button"
                     >
                       Guess word
+                    </Link>
+                    <Link to={deck.node.fields.slug} className="button">
+                      View all
                     </Link>
                   </div>
                 </div>
