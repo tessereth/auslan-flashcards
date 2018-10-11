@@ -9,10 +9,16 @@ const IndexPage = ({ data }) => {
       <section className="hero is-primary is-bold is-medium">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">Auslan flashcards</h1>
-            <p className="subtitle">
+            <h1 className="title is-size-1">Auslan flashcards</h1>
+            <p className="subtitle is-size-4">
               Practice your signing using videos from the{' '}
-              <a href="http://www.auslan.org.au/">Auslan signbank</a>
+              <a
+                href="http://www.auslan.org.au/"
+                target="_blank"
+                rel="noopener noreferrer external"
+              >
+                Auslan signbank
+              </a>
             </p>
           </div>
         </div>

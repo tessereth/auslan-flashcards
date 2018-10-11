@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PrimaryFooter = () => (
-  <footer className="footer">
+  <footer className="footer af-footer">
     <div className="container">
       <p>
         All videos &mdash; &copy;{' '}
@@ -14,7 +14,15 @@ const PrimaryFooter = () => (
         </a>
       </p>
       <p>
-        Website &mdash; &copy; 2018 Teresa Bradbury &mdash; licenced under TBA
+        Website and source code &mdash; &copy; 2018 Teresa Bradbury &mdash;
+        licenced{' '}
+        <a
+          href="https://github.com/tessereth/auslan-flashcards/blob/master/LICENSE"
+          target="_blank"
+          rel="noopener noreferrer external"
+        >
+          MIT
+        </a>
       </p>
     </div>
   </footer>

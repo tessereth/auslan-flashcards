@@ -63,21 +63,30 @@ button.box {
 }
 
 // sticky footer
-.everything {
+.af-everything {
   height: 100vh;
-}
-.everything {
   display: flex;
   flex-direction: column;
 }
-.content {
+.af-above-footer {
   flex: 1 0 auto;
 }
-.footer {
+.af-footer {
   flex-shrink: 0;
 }
 
 // Hide the volume controls
 .vjs-volume-panel {
   display: none !important;
+}
+
+// links in a hero
+.hero.is-primary {
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $grey-lighter !important;
+    }
+  }
 }

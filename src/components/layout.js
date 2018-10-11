@@ -29,8 +29,8 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <div className="everything">
-          <div className="content">
+        <div className="af-everything">
+          <div className="af-above-footer">
             <PrimaryNav />
             <main>{children}</main>
           </div>
