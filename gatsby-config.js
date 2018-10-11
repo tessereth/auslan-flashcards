@@ -12,8 +12,8 @@ module.exports = {
         name: 'auslan-flashcards',
         short_name: 'flashcards',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#8e3aff',
+        theme_color: '#8e3aff',
         display: 'minimal-ui',
         icon: 'src/images/wave-icon.png', // This path is relative to the root of the site.
       },

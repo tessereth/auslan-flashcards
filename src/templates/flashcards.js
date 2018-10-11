@@ -111,7 +111,7 @@ class FlashcardScene extends React.PureComponent {
                     Done!
                   </button>
                 ) : (
-                  <button className="button is-info" onClick={this.next}>
+                  <button className="button is-primary" onClick={this.next}>
                     Next
                   </button>
                 )}
