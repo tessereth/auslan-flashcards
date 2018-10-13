@@ -33,8 +33,13 @@ $subtitle-padding-top: ($card-max-height - $subtitle-size * $subtitle-line-heigh
 }
 
 .flashcard__content--video {
-  max-width: $card-max-width;
-  max-height: $card-max-height;
+  width: 12rem;
+  height: 9rem;
+
+  @media (min-width: $tablet) {
+    width: $card-max-width;
+    height: $card-max-height;
+  }
 }
 
 .flashcard__content--word {

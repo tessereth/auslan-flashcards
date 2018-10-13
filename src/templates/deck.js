@@ -38,7 +38,7 @@ const Deck = ({ data }) => {
         <div className="container">
           <div className="columns is-multiline">
             {data.decksYaml.words.map(word => (
-              <div key={word.id} className="column is-one-third">
+              <div key={word.id} className="column is-half is-one-third-fullhd">
                 <div className="card">
                   <div className="card-header">
                     <div className="card-header-title has-text-centered is-block">
