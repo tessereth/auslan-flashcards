@@ -119,9 +119,15 @@ class Form extends React.PureComponent {
 
   serializedDeck = () => {
     // ignore anything missing a title/url
-    const words = this.state.words.filter(
-      word => word.get('title').length > 0 && word.get('web').length > 0
-    )
+    const words = this.state.words
+      .filter(
+        word => word.get('title').length > 0 && word.get('web').length > 0
+      )
+      .map(word =>
+        word.update('web', web =>
+          web.replace('http://www.auslan.org.au/dictionary/words/', '')
+        )
+      )
     return btoa(JSON.stringify({ name: this.state.name, words: words }))
   }
 

@@ -20,14 +20,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const createFor = (slug, idx, guess) => {
+  const createFor = (slug, guess) => {
     createPage({
-      path: slug + '/' + guess + '/' + (idx + 1),
+      path: slug + '/' + guess,
       component: path.resolve('./src/templates/flashcards.js'),
       context: {
         slug: slug,
-        idx: idx,
-        number: idx + 1,
         guess: guess,
       },
     })
@@ -57,10 +55,8 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve('./src/templates/deck.js'),
           context: { slug },
         })
-        node.words.forEach((_, idx) => {
-          createFor(slug, idx, 'word')
-          createFor(slug, idx, 'sign')
-        })
+        createFor(slug, 'word')
+        createFor(slug, 'sign')
       })
       resolve()
     })
