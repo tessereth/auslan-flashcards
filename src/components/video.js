@@ -2,6 +2,10 @@ import React from 'react'
 import videojs from 'video.js'
 
 const mediaPath = mediaRef => {
+  // If it's already a url, just return it
+  if (mediaRef.startsWith('http')) {
+    return mediaRef
+  }
   let base
   if (mediaRef.slice(-2) === '_1') {
     base = 'http://media.auslan.org.au/mp4video'

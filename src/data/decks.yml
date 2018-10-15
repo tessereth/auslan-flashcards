@@ -1,3 +1,68 @@
+- name: Basics 1
+  words:
+    - id: hello
+      web: http://www.auslan.org.au/dictionary/words/hello-1.html
+      video: '33460_1'
+    - id: how-are-you
+      title: "how are you?"
+      web: http://www.auslan.org.au/dictionary/words/How%20are%20you-2.html
+      video: '34440'
+    - id: yes
+      web: http://www.auslan.org.au/dictionary/words/yes-2.html
+      video: '59430_1'
+    - id: no
+      # this is... close?
+      web: http://www.auslan.org.au/dictionary/words/no-1.html
+      video: '59410_1'
+    - id: good
+      web: http://www.auslan.org.au/dictionary/words/good-1.html
+      video: '47760_1'
+    - id: bad
+      web: http://www.auslan.org.au/dictionary/words/bad-1.html
+      video: '49790'
+    - id: tired
+      web: http://www.auslan.org.au/dictionary/words/tired-1.html
+      video: '34230'
+    - id: busy
+      web: http://www.auslan.org.au/dictionary/words/busy-1.html
+      video: '27460'
+    - id: again
+      web: http://www.auslan.org.au/dictionary/words/again-1.html
+      video: '16020_1'
+    - id: practice
+      web: http://www.auslan.org.au/dictionary/words/practice-3.html
+      video: http://media.auslan.org.au/mp4video/48/48190
+    - id: start
+      web: http://www.auslan.org.au/dictionary/words/start-1.html
+      video: '9780_1'
+    # There does not appear to be a variant for this
+    # http://www.auslan.org.au/dictionary/words/finish-1.html
+    #- id: finish
+    #  web:
+    #  video: ''
+    - id: now
+      # this is the closest
+      web: http://www.auslan.org.au/dictionary/words/now-2.html
+      video: '38610_1'
+    - id: sick
+      web: http://www.auslan.org.au/dictionary/words/sick-3.html
+      video: '49870'
+    - id: deaf
+      web: http://www.auslan.org.au/dictionary/words/deaf-2.html
+      video: '19090_1'
+    - id: hearing
+      web: http://www.auslan.org.au/dictionary/words/hearing-2.html
+      video: '5770'
+    - id: job-work
+      title: "job/work"
+      web: http://www.auslan.org.au/dictionary/words/job-1.html
+      video: '41870_1'
+    - id: sign
+      web: http://www.auslan.org.au/dictionary/words/sign-2.html
+      video: '27010_1'
+    - id: auslan
+      web: http://www.auslan.org.au/dictionary/words/Auslan-2.html
+      video: '26030'
 - name: Little words
   words:
     - id: same
