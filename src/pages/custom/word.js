@@ -6,7 +6,6 @@ const CustomWord = props => {
   const deck = JSON.parse(atob(urlParams.get('deck')))
   deck.words.forEach((word, index) => {
     word.id = String(index)
-    word.video = '9930_1'
   })
   return (
     <FlashcardScene
@@ -14,6 +13,7 @@ const CustomWord = props => {
       guess="word"
       deck={deck}
       search={props.location.search}
+      custom
     />
   )
 }

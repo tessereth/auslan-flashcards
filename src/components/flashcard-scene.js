@@ -112,13 +112,27 @@ class FlashcardScene extends React.PureComponent {
   }
 
   render() {
-    const { deck, slug, guess } = this.props
+    const { deck, slug, guess, custom } = this.props
     const idx = this.idx()
     const word = deck.words[idx]
     return (
       <Layout>
         <TitleBar>
-          <h1 className="title">{deck.name}</h1>
+          <div className="level">
+            <div className="level-left">
+              <h1 className="title">{deck.name}</h1>
+            </div>
+            {custom && (
+              <div className="level-right">
+                <Link
+                  to={`/build-custom?${this.search(0)}`}
+                  className="button is-primary is-outlined is-inverted"
+                >
+                  Edit
+                </Link>
+              </div>
+            )}
+          </div>
         </TitleBar>
         <section className="section">
           <div className="container">

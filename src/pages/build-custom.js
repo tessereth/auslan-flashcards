@@ -21,7 +21,7 @@ const WordInput = SortableElement(({ word, onWordChange, onDelete }) => (
         <div className="control">
           <DragHandle />
         </div>
-        <div className="control is-expanded">
+        <div className="control">
           <input
             className="input"
             type="text"
@@ -29,6 +29,15 @@ const WordInput = SortableElement(({ word, onWordChange, onDelete }) => (
             value={word.get('title')}
             onChange={e => onWordChange('title', e.target.value)}
             ref={word.get('focusRef')}
+          />
+        </div>
+        <div className="control">
+          <input
+            className="input"
+            type="text"
+            placeholder="16020_1"
+            value={word.get('video')}
+            onChange={e => onWordChange('video', e.target.value)}
           />
         </div>
         <div className="control is-expanded">
@@ -71,16 +80,37 @@ const WordListInput = SortableContainer(({ words, onWordChange, onDelete }) => {
   )
 })
 
+const blankWord = Map({
+  title: '',
+  web: '',
+  video: '',
+  focusRef: React.createRef(),
+})
+
 class Form extends React.PureComponent {
   state = {
     name: 'my custom deck',
-    words: List([
-      Map({
-        title: '',
-        web: '',
-        focusRef: React.createRef(),
-      }),
-    ]),
+    words: List([blankWord]),
+  }
+
+  componentDidMount() {
+    let params = new URLSearchParams(this.props.search)
+    if (params.has('deck')) {
+      const deck = JSON.parse(atob(params.get('deck')))
+      this.setState({
+        name: deck.name || '',
+        words: List(
+          deck.words.map(word =>
+            Map({
+              title: word.title || '',
+              web: 'http://www.auslan.org.au/dictionary/words/' + word.web,
+              video: word.video || '',
+              focusRef: React.createRef(),
+            })
+          )
+        ),
+      })
+    }
   }
 
   onSortEnd = ({ oldIndex, newIndex }) => {
@@ -105,13 +135,7 @@ class Form extends React.PureComponent {
   onAdd = () => {
     this.setState(
       {
-        words: this.state.words.push(
-          Map({
-            title: '',
-            web: '',
-            focusRef: React.createRef(),
-          })
-        ),
+        words: this.state.words.push(blankWord),
       },
       () => {
         this.state.words
@@ -132,7 +156,10 @@ class Form extends React.PureComponent {
     // ignore anything missing a title/url
     const words = this.state.words
       .filter(
-        word => word.get('title').length > 0 && word.get('web').length > 0
+        word =>
+          word.get('title').length > 0 &&
+          word.get('web').length > 0 &&
+          word.get('video').length > 0
       )
       .map(word =>
         Map({
@@ -140,6 +167,7 @@ class Form extends React.PureComponent {
             .get('web')
             .replace('http://www.auslan.org.au/dictionary/words/', ''),
           title: word.get('title'),
+          video: word.get('video'),
         })
       )
     return btoa(JSON.stringify({ name: this.state.name, words: words }))
@@ -195,7 +223,7 @@ class Form extends React.PureComponent {
   }
 }
 
-const BuildCustom = () => {
+const BuildCustom = ({ location }) => {
   return (
     <Layout>
       <TitleBar>
@@ -203,7 +231,7 @@ const BuildCustom = () => {
       </TitleBar>
       <section className="section">
         <div className="container">
-          <Form />
+          <Form search={location.search} />
         </div>
       </section>
     </Layout>
