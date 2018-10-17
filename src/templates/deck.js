@@ -3,37 +3,34 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import ExternalLink from '../components/external-link'
 import Video from '../components/video'
+import TitleBar from '../components/title-bar'
 
 const Deck = ({ data }) => {
   return (
     <Layout>
-      <section className="hero is-primary is-small">
-        <div className="hero-body">
-          <div className="container">
-            <div className="level">
-              <div className="level-left">
-                <h1 className="title">{data.decksYaml.name}</h1>
-              </div>
-              <div className="level-right">
-                <div className="buttons">
-                  <Link
-                    to={data.decksYaml.fields.slug + '/sign/1'}
-                    className="button is-primary is-outlined is-inverted"
-                  >
-                    Guess sign
-                  </Link>
-                  <Link
-                    to={data.decksYaml.fields.slug + '/word/1'}
-                    className="button is-primary is-outlined is-inverted"
-                  >
-                    Guess word
-                  </Link>
-                </div>
-              </div>
+      <TitleBar>
+        <div className="level">
+          <div className="level-left">
+            <h1 className="title">{data.decksYaml.name}</h1>
+          </div>
+          <div className="level-right">
+            <div className="buttons">
+              <Link
+                to={data.decksYaml.fields.slug + '/sign/1'}
+                className="button is-primary is-outlined is-inverted"
+              >
+                Guess sign
+              </Link>
+              <Link
+                to={data.decksYaml.fields.slug + '/word/1'}
+                className="button is-primary is-outlined is-inverted"
+              >
+                Guess word
+              </Link>
             </div>
           </div>
         </div>
-      </section>
+      </TitleBar>
       <section className="section">
         <div className="container">
           <div className="columns is-multiline">
