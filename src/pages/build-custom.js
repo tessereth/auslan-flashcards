@@ -4,7 +4,7 @@ import {
   SortableContainer,
   SortableHandle,
 } from 'react-sortable-hoc'
-import { fromJS } from 'immutable'
+import { List, Map } from 'immutable'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -28,6 +28,7 @@ const WordInput = SortableElement(({ word, onWordChange, onDelete }) => (
             placeholder="Same"
             value={word.get('title')}
             onChange={e => onWordChange('title', e.target.value)}
+            ref={word.get('focusRef')}
           />
         </div>
         <div className="control is-expanded">
@@ -73,11 +74,12 @@ const WordListInput = SortableContainer(({ words, onWordChange, onDelete }) => {
 class Form extends React.PureComponent {
   state = {
     name: 'my custom deck',
-    words: fromJS([
-      {
+    words: List([
+      Map({
         title: '',
         web: '',
-      },
+        focusRef: React.createRef(),
+      }),
     ]),
   }
 
@@ -101,14 +103,23 @@ class Form extends React.PureComponent {
   }
 
   onAdd = () => {
-    this.setState({
-      words: this.state.words.push(
-        fromJS({
-          title: '',
-          web: '',
-        })
-      ),
-    })
+    this.setState(
+      {
+        words: this.state.words.push(
+          Map({
+            title: '',
+            web: '',
+            focusRef: React.createRef(),
+          })
+        ),
+      },
+      () => {
+        this.state.words
+          .get(-1)
+          .get('focusRef')
+          .current.focus()
+      }
+    )
   }
 
   onDelete = index => {
@@ -124,9 +135,12 @@ class Form extends React.PureComponent {
         word => word.get('title').length > 0 && word.get('web').length > 0
       )
       .map(word =>
-        word.update('web', web =>
-          web.replace('http://www.auslan.org.au/dictionary/words/', '')
-        )
+        Map({
+          web: word
+            .get('web')
+            .replace('http://www.auslan.org.au/dictionary/words/', ''),
+          title: word.get('title'),
+        })
       )
     return btoa(JSON.stringify({ name: this.state.name, words: words }))
   }
