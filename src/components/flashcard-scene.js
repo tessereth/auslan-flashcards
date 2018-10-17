@@ -95,6 +95,9 @@ class FlashcardScene extends React.PureComponent {
   }
 
   idx = () => {
+    if (typeof URLSearchParams === 'undefined') {
+      return 0
+    }
     const urlParams = new URLSearchParams(this.props.search)
     const idx = parseInt(urlParams.get('idx') || '0')
     if (idx < 0) {
@@ -108,6 +111,10 @@ class FlashcardScene extends React.PureComponent {
 
   seed = () => {
     if (this._seed === undefined) {
+      if (typeof URLSearchParams === 'undefined') {
+        this._seed = 0
+        return this._seed
+      }
       let params = new URLSearchParams(this.props.search)
       if (params.has('seed')) {
         this._seed = params.get('seed')
@@ -123,6 +130,9 @@ class FlashcardScene extends React.PureComponent {
   }
 
   search = idx => {
+    if (typeof URLSearchParams === 'undefined') {
+      return ''
+    }
     let params = new URLSearchParams(this.props.search)
     params.set('idx', idx)
     params.set('seed', this.seed())

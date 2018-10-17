@@ -94,22 +94,24 @@ class Form extends React.PureComponent {
   }
 
   componentDidMount() {
-    let params = new URLSearchParams(this.props.search)
-    if (params.has('deck')) {
-      const deck = JSON.parse(atob(params.get('deck')))
-      this.setState({
-        name: deck.name || '',
-        words: List(
-          deck.words.map(word =>
-            Map({
-              title: word.title || '',
-              web: 'http://www.auslan.org.au/dictionary/words/' + word.web,
-              video: word.video || '',
-              focusRef: React.createRef(),
-            })
-          )
-        ),
-      })
+    if (typeof URLSearchParams !== 'undefined') {
+      let params = new URLSearchParams(this.props.search)
+      if (params.has('deck')) {
+        const deck = JSON.parse(atob(params.get('deck')))
+        this.setState({
+          name: deck.name || '',
+          words: List(
+            deck.words.map(word =>
+              Map({
+                title: word.title || '',
+                web: 'http://www.auslan.org.au/dictionary/words/' + word.web,
+                video: word.video || '',
+                focusRef: React.createRef(),
+              })
+            )
+          ),
+        })
+      }
     }
   }
 
@@ -170,7 +172,11 @@ class Form extends React.PureComponent {
           video: word.get('video'),
         })
       )
-    return btoa(JSON.stringify({ name: this.state.name, words: words }))
+    if (typeof btoa === 'undefined') {
+      return JSON.stringify({ name: this.state.name, words: words })
+    } else {
+      return btoa(JSON.stringify({ name: this.state.name, words: words }))
+    }
   }
 
   render() {
