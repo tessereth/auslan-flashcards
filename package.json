@@ -21,6 +21,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-sortable-hoc": "^0.8.3",
+    "shuffle-seed": "^1.1.6",
     "video.js": "^7.2.3"
   },
   "keywords": [

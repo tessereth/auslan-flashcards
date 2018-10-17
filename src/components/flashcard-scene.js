@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, navigate } from 'gatsby'
+import { shuffle } from 'shuffle-seed'
 
 import Layout from '../components/layout'
 import Flashcard from '../components/flashcard'
@@ -105,16 +106,33 @@ class FlashcardScene extends React.PureComponent {
     }
   }
 
+  seed = () => {
+    if (this._seed === undefined) {
+      let params = new URLSearchParams(this.props.search)
+      if (params.has('seed')) {
+        this._seed = params.get('seed')
+      } else {
+        this._seed = Math.floor(Math.random() * 10000)
+      }
+    }
+    return this._seed
+  }
+
+  words = () => {
+    return shuffle(this.props.deck.words, this.seed())
+  }
+
   search = idx => {
     let params = new URLSearchParams(this.props.search)
     params.set('idx', idx)
+    params.set('seed', this.seed())
     return params.toString()
   }
 
   render() {
     const { deck, slug, guess, custom } = this.props
     const idx = this.idx()
-    const word = deck.words[idx]
+    const word = this.words()[idx]
     return (
       <Layout>
         <TitleBar>
