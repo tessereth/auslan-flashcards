@@ -47,8 +47,8 @@
       web: http://www.auslan.org.au/dictionary/words/sick-3.html
       video: '49870'
     - id: deaf
-      web: http://www.auslan.org.au/dictionary/words/deaf-2.html
-      video: '19090_1'
+      web: http://www.auslan.org.au/dictionary/words/deaf-1.html
+      video: '19120_1'
     - id: hearing
       web: http://www.auslan.org.au/dictionary/words/hearing-2.html
       video: '5770'
@@ -62,6 +62,253 @@
     - id: auslan
       web: http://www.auslan.org.au/dictionary/words/Auslan-2.html
       video: '26030'
+- name: Basics 2
+  words:
+    - id: dont
+      name: "don't"
+      web: http://www.auslan.org.au/dictionary/words/don't-1.html
+      video: '3100_1'
+    - id: understand
+      web: http://www.auslan.org.au/dictionary/words/understand-3.html
+      video: '63360_1'
+    - id: please
+      web: http://www.auslan.org.au/dictionary/words/please-1.html
+      video: '32840_1'
+    - id: thanks
+      title: thank you
+      web: http://www.auslan.org.au/dictionary/words/thanks-1.html
+      video: '32880_1'
+    - id: sorry
+      web: http://www.auslan.org.au/dictionary/words/sorry-4.html
+      video: '29140'
+    - id: move
+      web: http://www.auslan.org.au/dictionary/words/move-1.html
+      video: '37900_1'
+    - id: have
+      web: http://www.auslan.org.au/dictionary/words/have-1.html
+      video: '25320'
+    - id: dont-have
+      title: "don't have"
+      web: http://www.auslan.org.au/dictionary/words/don't%20have-1.html
+      video: '1090'
+    - id: show
+      web: http://www.auslan.org.au/dictionary/words/show-2.html
+      video: '55370'
+    - id: help
+      web: http://www.auslan.org.au/dictionary/words/help-1.html
+      video: '42530_1'
+    - id: know
+      web: http://www.auslan.org.au/dictionary/words/know-1.html
+      video: '47070_1'
+    - id: dont-know
+      title: "don't know"
+      web: http://www.auslan.org.au/dictionary/words/don't%20know-2.html
+      video: '31290_1'
+    - id: forget
+      web: http://www.auslan.org.au/dictionary/words/forget-1.html
+      video: '120'
+    - id: remember
+      web: http://www.auslan.org.au/dictionary/words/remember-2.html
+      video: '220_1'
+    - id: introduce
+      web: http://www.auslan.org.au/dictionary/words/introduce-1.html
+      video: '38270_1'
+    - id: pleased
+      web: http://www.auslan.org.au/dictionary/words/pleased-1.html
+      video: '46180_1'
+    - id: meet
+      web: http://www.auslan.org.au/dictionary/words/meet-1.html
+      video: '9090_1'
+    - id: student
+      web: http://www.auslan.org.au/dictionary/words/student-1.html
+      video: '28710_1'
+    - id: teacher
+      web: http://www.auslan.org.au/dictionary/words/teacher-2.html
+      video: '50940_1'
+    - id: voice-off
+      title: voice off
+      video: '60850_1'
+      web: http://www.auslan.org.au/dictionary/words/voiceless-1.html
+- name: Basics 3
+  words:
+    - id: me
+      title: "me / I"
+      web: http://www.auslan.org.au/dictionary/words/me-1.html
+      video: '6710_1'
+    - id: you
+      web: http://www.auslan.org.au/dictionary/words/you%20(singular)-1.html
+      video: '7590_1'
+    - id: mine
+      web: http://www.auslan.org.au/dictionary/words/mine-2.html
+      video: '56410'
+    - id: your
+      web: http://www.auslan.org.au/dictionary/words/your-1.html
+      video: '56530_1'
+    - id: can
+      web: http://www.auslan.org.au/dictionary/words/can-1.html
+      video: '50750_1'
+    - id: cant
+      title: "can't"
+      web: http://www.auslan.org.au/dictionary/words/can't-1.html
+      video: '5300'
+    - id: same
+      video: '9930_1'
+      web: http://www.auslan.org.au/dictionary/words/same-2.html
+    - id: different
+      video: '10020'
+      web: http://www.auslan.org.au/dictionary/words/different-1.html
+    - id: sometime
+      web: http://www.auslan.org.au/dictionary/words/sometimes-1.html
+      video: '9800_1'
+    - id: board
+      web: http://www.auslan.org.au/dictionary/words/board-5.html
+      video: '33560_1'
+    - id: topic
+      web: http://www.auslan.org.au/dictionary/words/topic-2.html
+      video: '16360_1'
+    - id: slow
+      web: http://www.auslan.org.au/dictionary/words/slow-1.html
+      video: '40370_1'
+    - id: fast
+      web: http://www.auslan.org.au/dictionary/words/fast-1.html
+      video: '10560'
+    - id: what
+      video: '7300_1'
+      web: http://www.auslan.org.au/dictionary/words/what-1.html
+    - id: why
+      video: '51490_1'
+      web: http://www.auslan.org.au/dictionary/words/why-1.html
+    - id: where
+      video: '27810_1'
+      web: http://www.auslan.org.au/dictionary/words/where-1.html
+    - id: who
+      video: '6950_1'
+      web: http://www.auslan.org.au/dictionary/words/who-1.html
+    - id: when
+      video: '24560_1'
+      web: http://www.auslan.org.au/dictionary/words/when-1.html
+    - id: which
+      video: '66090'
+      web: http://www.auslan.org.au/dictionary/words/which-3.html
+    - id: how
+      video: '42501_1'
+      web: http://www.auslan.org.au/dictionary/words/how-2.html
+- name: Numbers
+  words:
+    - id: one
+      web: http://www.auslan.org.au/dictionary/words/one-1.html
+      video: 'http://media.auslan.org.au/mp4video/68/6860'
+    - id: two
+      web: http://www.auslan.org.au/dictionary/words/two-1.html
+      video: 'http://media.auslan.org.au/mp4video/15/15850'
+    - id: three
+      web: http://www.auslan.org.au/dictionary/words/three-1.html
+      video: 'http://media.auslan.org.au/mp4video/22/22480'
+    - id: four
+      web: http://www.auslan.org.au/dictionary/words/four-1.html
+      video: 'http://media.auslan.org.au/mp4video/23/23810'
+    - id: five
+      web: http://www.auslan.org.au/dictionary/words/five-1.html
+      video: 'http://media.auslan.org.au/mp4video/24/24980'
+    - id: six
+      web: http://www.auslan.org.au/dictionary/words/six-1.html
+      video: 'http://media.auslan.org.au/mp4video/47/47720'
+    - id: seven
+      web: http://www.auslan.org.au/dictionary/words/seven-1.html
+      video: 'http://media.auslan.org.au/mp4video/51/51530'
+    - id: eight
+      web: http://www.auslan.org.au/dictionary/words/eight-1.html
+      video: 'http://media.auslan.org.au/mp4video/55/55210'
+    - id: nine
+      web: http://www.auslan.org.au/dictionary/words/nine-1.html
+      video: '55600_1'
+    - id: ten
+      web: http://www.auslan.org.au/dictionary/words/ten-1.html
+      video: '800_1'
+    - id: eleven
+      web: http://www.auslan.org.au/dictionary/words/eleven-1.html
+      video: 'http://media.auslan.org.au/mp4video/75/7500'
+    - id: twelve
+      web: http://www.auslan.org.au/dictionary/words/twelve-2.html
+      video: 'http://media.auslan.org.au/mp4video/63/63780'
+    - id: thirteen
+      web: http://www.auslan.org.au/dictionary/words/thirteen-1.html
+      video: 'http://media.auslan.org.au/mp4video/22/22485'
+    - id: fourteen
+      web: http://www.auslan.org.au/dictionary/words/fourteen-1.html
+      video: 'http://media.auslan.org.au/mp4video/23/23815'
+    - id: fifteen
+      web: http://www.auslan.org.au/dictionary/words/fifteen-1.html
+      video: '24980_1'
+    - id: sixteen
+      web: http://www.auslan.org.au/dictionary/words/sixteen-1.html
+      video: 'http://media.auslan.org.au/mp4video/47/47735'
+    - id: seventeen
+      web: http://www.auslan.org.au/dictionary/words/seventeen-1.html
+      video: 'http://media.auslan.org.au/mp4video/51/51535'
+    - id: eighteen
+      web: http://www.auslan.org.au/dictionary/words/eighteen-1.html
+      video: 'http://media.auslan.org.au/mp4video/55/55227'
+    - id: nineteen
+      web: http://www.auslan.org.au/dictionary/words/nineteen-1.html
+      video: 'http://media.auslan.org.au/mp4video/55/55603'
+    - id: hundred
+      web: http://www.auslan.org.au/dictionary/words/hundreds-1.html
+      video: 'http://media.auslan.org.au/mp4video/24/24730'
+    - id: thousand
+      web: http://www.auslan.org.au/dictionary/words/thousand-1.html
+      video: 'http://media.auslan.org.au/mp4video/70/7020'
+    - id: dollars
+      web: http://www.auslan.org.au/dictionary/words/dollar-1.html
+      video: '46730_1'
+    - id: cents
+      web: http://www.auslan.org.au/dictionary/words/cent-1.html
+      video: 'http://media.auslan.org.au/mp4video/53/53300'
+- name: Family
+  words:
+    - id: family
+      video: '20700_1'
+      web: http://www.auslan.org.au/dictionary/words/family-2.html
+    - id: mother
+      web: http://www.auslan.org.au/dictionary/words/mother-1.html
+      video: '23491_1'
+    - id: father
+      web: http://www.auslan.org.au/dictionary/words/father-1.html
+      video: '20560_1'
+    - id: spouse
+      title: "husband / wife"
+      web: http://www.auslan.org.au/dictionary/words/spouse-1.html
+      video: '4410_1'
+    - id: man
+      video: '56160_1'
+      web: http://www.auslan.org.au/dictionary/words/man-1.html
+    - id: woman
+      video: '32360_1'
+      web: http://www.auslan.org.au/dictionary/words/woman-1.html
+    - id: children
+      video: 'http://media.auslan.org.au/mp4video/34/34960'
+      web: http://www.auslan.org.au/dictionary/words/children-2.html
+    - id: boy
+      web: http://www.auslan.org.au/dictionary/words/boy-1.html
+      video: '6330_1'
+    - id: girl
+      web: http://www.auslan.org.au/dictionary/words/girl-2.html
+      video: '5810'
+    - id: son
+      web: http://www.auslan.org.au/dictionary/words/son-1.html
+      video: '50380_1'
+    - id: daughter
+      web: http://www.auslan.org.au/dictionary/words/daughter-1.html
+      video: '53930_1'
+    - id: brother
+      web: http://www.auslan.org.au/dictionary/words/brother-1.html
+      video: '57890_1'
+    - id: sister
+      web: http://www.auslan.org.au/dictionary/words/sister-1.html
+      video: '13630'
+    - id: baby
+      web: http://www.auslan.org.au/dictionary/words/baby-1.html
+      video: '38160'
 - name: Little words
   words:
     - id: same
@@ -164,26 +411,9 @@
     - id: adapt
       video: '57810_1'
       web: http://www.auslan.org.au/dictionary/words/adapt-1.html
-    - id: please
-      video: '32840_1'
-      web: http://www.auslan.org.au/dictionary/words/please-1.html
-    - id: thanks
-      title: thank you
-      video: '32880_1'
-      web: http://www.auslan.org.au/dictionary/words/thanks-1.html
     - id: car
       video: '58500_1'
       web: http://www.auslan.org.au/dictionary/words/car-2.html
-    - id: voice-off
-      title: voice off
-      video: '60850_1'
-      web: http://www.auslan.org.au/dictionary/words/voiceless-1.html
-    - id: understand
-      video: '63360_1'
-      web: http://www.auslan.org.au/dictionary/words/understand-3.html
-    - id: children
-      video: 'http://media.auslan.org.au/mp4video/34/34960'
-      web: http://www.auslan.org.au/dictionary/words/children-2.html
     - id: adult
       video: '31460_1'
       web: http://www.auslan.org.au/dictionary/words/adult-1.html
@@ -197,9 +427,3 @@
     - id: people
       video: '5350'
       web: http://www.auslan.org.au/dictionary/words/people-1.html
-    - id: man
-      video: '56160_1'
-      web: http://www.auslan.org.au/dictionary/words/man-1.html
-    - id: woman
-      video: '32360_1'
-      web: http://www.auslan.org.au/dictionary/words/woman-1.html
