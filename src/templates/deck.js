@@ -16,13 +16,13 @@ const Deck = ({ data }) => {
           <div className="level-right">
             <div className="buttons">
               <Link
-                to={data.decksYaml.fields.slug + '/sign/1'}
+                to={data.decksYaml.fields.slug + '/sign'}
                 className="button is-primary is-outlined is-inverted"
               >
                 Guess sign
               </Link>
               <Link
-                to={data.decksYaml.fields.slug + '/word/1'}
+                to={data.decksYaml.fields.slug + '/word'}
                 className="button is-primary is-outlined is-inverted"
               >
                 Guess word
