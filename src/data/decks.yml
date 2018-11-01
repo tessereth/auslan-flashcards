@@ -360,6 +360,51 @@
     - id: which
       web: 'http://www.auslan.org.au/dictionary/words/which-3.html'
       video: '66090'
+- name: Purpose words
+  words:
+    - id: will
+      web: 'http://www.auslan.org.au/dictionary/words/will-2.html'
+      video: '56000'
+    - id: won't
+      web: 'http://www.auslan.org.au/dictionary/words/won''t-1.html'
+      video: '56010_1'
+    - id: can
+      web: 'http://www.auslan.org.au/dictionary/words/can-1.html'
+      video: '50750_1'
+    - id: cant
+      title: can't
+      web: 'http://www.auslan.org.au/dictionary/words/can''t-1.html'
+      video: '5300'
+    - id: want
+      web: 'http://www.auslan.org.au/dictionary/words/want-2.html'
+      video: '34540'
+    - id: dont-want
+      title: don't want
+      web: 'http://www.auslan.org.au/dictionary/words/don''t%20want-1.html'
+      video: '34510_1'
+    - id: have
+      web: 'http://www.auslan.org.au/dictionary/words/have-1.html'
+      video: '25320'
+    - id: dont-have
+      title: don't have
+      web: 'http://www.auslan.org.au/dictionary/words/don''t%20have-1.html'
+      video: '1090'
+    - id: need
+      web: 'http://www.auslan.org.au/dictionary/words/need-1.html'
+      video: '34210_1'
+    - id: must
+      web: 'http://www.auslan.org.au/dictionary/words/must-1.html'
+      video: '24880'
+    - id: should
+      web: 'http://www.auslan.org.au/dictionary/words/should-1.html'
+      video: '47540_1'
+    - id: because
+      web: 'http://www.auslan.org.au/dictionary/words/because-4.html'
+      video: '51490_1'
+    - id: cant-be-bothered
+      title: Can't be bothered
+      web: 'http://www.auslan.org.au/dictionary/words/bother%20(not)-1.html'
+      video: '40530_1'
 - name: Misc 1
   words:
     - id: fingerspell
