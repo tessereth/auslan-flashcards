@@ -3,6 +3,7 @@
 const yaml = require('js-yaml')
 const fs = require('fs')
 const fetch = require('node-fetch')
+const uniqueSlug = require('unique-slug')
 
 const mp4regex = /http[^"]*\.mp4/g
 
@@ -29,6 +30,18 @@ function sortKeys(left, right) {
   return leftVal - rightVal
 }
 
+function slugify(str) {
+  str = str.replace(/^\s+|\s+$/g, '') // trim
+  str = str.toLowerCase()
+
+  str = str
+    .replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+    .replace(/-+/g, '-') // collapse dashes
+
+  return str
+}
+
 const decksPath = 'src/data/decks.yml'
 const decks = yaml.safeLoad(fs.readFileSync(decksPath, 'utf8'))
 const promises = []
@@ -36,7 +49,12 @@ const promises = []
 decks.forEach(deck => {
   deck.words.forEach(word => {
     if (word.web && !word.id) {
-      word.id = word.web.replace(/.*\//, '').replace(/-.*/, '')
+      const title = decodeURI(word.web.replace(/.*\//, '').replace(/-.*/, ''))
+      const id = slugify(title)
+      word.id = id
+      if (id !== title) {
+        word.title = title
+      }
     }
     if (word.web && !word.video) {
       console.log(`Downloading webpage for "${deck.name} - ${word.id}"`)
