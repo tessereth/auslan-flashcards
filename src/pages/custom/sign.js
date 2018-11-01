@@ -2,11 +2,11 @@ import React from 'react'
 import FlashcardScene from '../../components/flashcard-scene'
 import customDeckFromQuery from '../../utils/custom-deck-from-query'
 
-const CustomWord = props => {
+const CustomSign = props => {
   return (
     <FlashcardScene
       slug="custom"
-      guess="word"
+      guess="sign"
       deck={customDeckFromQuery(props.location.search)}
       search={props.location.search}
       custom
@@ -14,4 +14,4 @@ const CustomWord = props => {
   )
 }
 
-export default CustomWord
+export default CustomSign
