@@ -297,7 +297,7 @@
     - id: baby
       web: 'http://www.auslan.org.au/dictionary/words/baby-1.html'
       video: '38160'
-- name: Little words
+- name: Little words 1
   words:
     - id: same
       web: 'http://www.auslan.org.au/dictionary/words/same-2.html'
@@ -405,6 +405,32 @@
       title: Can't be bothered
       web: 'http://www.auslan.org.au/dictionary/words/bother%20(not)-1.html'
       video: '40530_1'
+- name: Little words 2
+  words:
+    - id: look
+      web: 'http://www.auslan.org.au/dictionary/words/look-1.html'
+      video: '15460_1'
+    - id: see
+      web: 'http://www.auslan.org.au/dictionary/words/see-2.html'
+      video: '5510'
+    - id: right
+      web: 'http://www.auslan.org.au/dictionary/words/rightness-1.html'
+      video: '49360_1'
+    - id: wrong
+      web: 'http://www.auslan.org.au/dictionary/words/wrong-1.html'
+      video: '49760_1'
+    - id: help
+      web: 'http://www.auslan.org.au/dictionary/words/help-1.html'
+      video: '42530_1'
+    - id: some
+      web: 'http://www.auslan.org.au/dictionary/words/some-1.html'
+      video: '1080'
+    - id: sorry
+      web: 'http://www.auslan.org.au/dictionary/words/sorry-4.html'
+      video: '29140'
+    - id: most
+      web: 'http://www.auslan.org.au/dictionary/words/most-1.html'
+      video: '10070'
 - name: Misc 1
   words:
     - id: fingerspell

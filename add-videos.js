@@ -3,7 +3,6 @@
 const yaml = require('js-yaml')
 const fs = require('fs')
 const fetch = require('node-fetch')
-const uniqueSlug = require('unique-slug')
 
 const mp4regex = /http[^"]*\.mp4/g
 
