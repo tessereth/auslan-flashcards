@@ -53,7 +53,7 @@
 - name: Basics 2
   words:
     - id: dont
-      name: don't
+      title: don't
       web: 'http://www.auslan.org.au/dictionary/words/don''t-1.html'
       video: '3100_1'
     - id: understand
@@ -115,8 +115,8 @@
       video: '50940_1'
     - id: voice-off
       title: voice off
-      video: '60850_1'
       web: 'http://www.auslan.org.au/dictionary/words/voiceless-1.html'
+      video: '60850_1'
 - name: Basics 3
   words:
     - id: me
@@ -140,11 +140,11 @@
       web: 'http://www.auslan.org.au/dictionary/words/can''t-1.html'
       video: '5300'
     - id: same
-      video: '9930_1'
       web: 'http://www.auslan.org.au/dictionary/words/same-2.html'
+      video: '9930_1'
     - id: different
-      video: '10020'
       web: 'http://www.auslan.org.au/dictionary/words/different-1.html'
+      video: '10020'
     - id: sometimes
       web: 'http://www.auslan.org.au/dictionary/words/sometimes-1.html'
       video: '9800_1'
@@ -161,26 +161,26 @@
       web: 'http://www.auslan.org.au/dictionary/words/fast-1.html'
       video: '10560'
     - id: what
-      video: '7300_1'
       web: 'http://www.auslan.org.au/dictionary/words/what-1.html'
+      video: '7300_1'
     - id: why
-      video: '51490_1'
       web: 'http://www.auslan.org.au/dictionary/words/why-1.html'
+      video: '51490_1'
     - id: where
-      video: '27810_1'
       web: 'http://www.auslan.org.au/dictionary/words/where-1.html'
+      video: '27810_1'
     - id: who
-      video: '6950_1'
       web: 'http://www.auslan.org.au/dictionary/words/who-1.html'
+      video: '6950_1'
     - id: when
-      video: '24560_1'
       web: 'http://www.auslan.org.au/dictionary/words/when-1.html'
+      video: '24560_1'
     - id: which
-      video: '66090'
       web: 'http://www.auslan.org.au/dictionary/words/which-3.html'
+      video: '66090'
     - id: how
-      video: '42501_1'
       web: 'http://www.auslan.org.au/dictionary/words/how-2.html'
+      video: '42501_1'
 - name: Numbers
   words:
     - id: one
@@ -255,8 +255,8 @@
 - name: Family
   words:
     - id: family
-      video: '20700_1'
       web: 'http://www.auslan.org.au/dictionary/words/family-2.html'
+      video: '20700_1'
     - id: mother
       web: 'http://www.auslan.org.au/dictionary/words/mother-1.html'
       video: '23491_1'
@@ -268,14 +268,14 @@
       web: 'http://www.auslan.org.au/dictionary/words/spouse-1.html'
       video: '4410_1'
     - id: man
-      video: '56160_1'
       web: 'http://www.auslan.org.au/dictionary/words/man-1.html'
+      video: '56160_1'
     - id: woman
-      video: '32360_1'
       web: 'http://www.auslan.org.au/dictionary/words/woman-1.html'
+      video: '32360_1'
     - id: children
-      video: 'http://media.auslan.org.au/mp4video/34/34960'
       web: 'http://www.auslan.org.au/dictionary/words/children-2.html'
+      video: 'http://media.auslan.org.au/mp4video/34/34960'
     - id: boy
       web: 'http://www.auslan.org.au/dictionary/words/boy-1.html'
       video: '6330_1'
@@ -300,117 +300,117 @@
 - name: Little words
   words:
     - id: same
-      video: '9930_1'
       web: 'http://www.auslan.org.au/dictionary/words/same-2.html'
+      video: '9930_1'
     - id: different
-      video: '10020'
       web: 'http://www.auslan.org.au/dictionary/words/different-1.html'
+      video: '10020'
     - id: again
-      video: '16020_1'
       web: 'http://www.auslan.org.au/dictionary/words/again-1.html'
+      video: '16020_1'
     - id: maybe
       title: maybe/or
-      video: '66020_1'
       web: 'http://www.auslan.org.au/dictionary/words/maybe-2.html'
+      video: '66020_1'
     - id: too-much
       title: lots/too much
-      video: '52710_1'
       web: 'http://www.auslan.org.au/dictionary/words/too%20much-2.html'
+      video: '52710_1'
     - id: but
-      video: '7350'
       web: 'http://www.auslan.org.au/dictionary/words/but-1.html'
+      video: '7350'
     - id: for
-      video: '21990_1'
       web: 'http://www.auslan.org.au/dictionary/words/for-1.html'
+      video: '21990_1'
     - id: go
-      video: '33690_1'
       web: 'http://www.auslan.org.au/dictionary/words/go-2.html'
+      video: '33690_1'
     - id: come
-      video: '14210'
       web: 'http://www.auslan.org.au/dictionary/words/come-2.html'
+      video: '14210'
     - id: with
-      video: '37230'
       web: 'http://www.auslan.org.au/dictionary/words/with-2.html'
+      video: '37230'
 - name: Question words
   words:
     - id: who
-      video: '6950_1'
       web: 'http://www.auslan.org.au/dictionary/words/who-1.html'
+      video: '6950_1'
     - id: what
-      video: '7300_1'
       web: 'http://www.auslan.org.au/dictionary/words/what-1.html'
+      video: '7300_1'
     - id: where
-      video: '27810_1'
       web: 'http://www.auslan.org.au/dictionary/words/where-1.html'
+      video: '27810_1'
     - id: when
-      video: '24560_1'
       web: 'http://www.auslan.org.au/dictionary/words/when-1.html'
+      video: '24560_1'
     - id: why
-      video: '51490_1'
       web: 'http://www.auslan.org.au/dictionary/words/why-1.html'
+      video: '51490_1'
     - id: how
-      video: '42501_1'
       web: 'http://www.auslan.org.au/dictionary/words/how-2.html'
+      video: '42501_1'
     - id: how much
-      video: '24640_1'
       web: 'http://www.auslan.org.au/dictionary/words/how%20much-1.html'
+      video: '24640_1'
     - id: how many
-      video: '24960_1'
       web: 'http://www.auslan.org.au/dictionary/words/how%20many-1.html'
+      video: '24960_1'
     - id: which
-      video: '66090'
       web: 'http://www.auslan.org.au/dictionary/words/which-3.html'
+      video: '66090'
 - name: Misc 1
   words:
     - id: fingerspell
-      video: '1500'
       web: 'http://www.auslan.org.au/dictionary/words/fingerspell-1.html'
+      video: '1500'
     - id: family
-      video: '20700_1'
       web: 'http://www.auslan.org.au/dictionary/words/family-2.html'
+      video: '20700_1'
     - id: friend
-      video: '46930'
       web: 'http://www.auslan.org.au/dictionary/words/friend-1.html'
+      video: '46930'
     - id: community
-      video: '36440_1'
       web: 'http://www.auslan.org.au/dictionary/words/community-1.html'
+      video: '36440_1'
     - id: communication
-      video: '45980_1'
       web: 'http://www.auslan.org.au/dictionary/words/communication-1.html'
+      video: '45980_1'
     - id: established
-      video: '49060_1'
       web: 'http://www.auslan.org.au/dictionary/words/establish-1.html'
+      video: '49060_1'
     - id: walk
-      video: '17260_1'
       web: 'http://www.auslan.org.au/dictionary/words/walk-2.html'
+      video: '17260_1'
     - id: Australia
-      video: '63140_1'
       web: 'http://www.auslan.org.au/dictionary/words/Australia-1.html'
+      video: '63140_1'
     - id: language
-      video: '52300_1'
       web: 'http://www.auslan.org.au/dictionary/words/language-1.html'
+      video: '52300_1'
     - id: name
-      video: '64570_1'
       web: 'http://www.auslan.org.au/dictionary/words/name-1.html'
+      video: '64570_1'
     - id: timeline
-      video: '41720_1'
       web: 'http://www.auslan.org.au/dictionary/words/time-frame-1.html'
+      video: '41720_1'
     - id: adapt
-      video: '57810_1'
       web: 'http://www.auslan.org.au/dictionary/words/adapt-1.html'
+      video: '57810_1'
     - id: car
-      video: '58500_1'
       web: 'http://www.auslan.org.au/dictionary/words/car-2.html'
+      video: '58500_1'
     - id: adult
-      video: '31460_1'
       web: 'http://www.auslan.org.au/dictionary/words/adult-1.html'
+      video: '31460_1'
     - id: hard-of-hearing
       title: hard of hearing
-      video: '19770_1'
       web: 'http://www.auslan.org.au/dictionary/words/hard%20of%20hearing-2.html'
+      video: '19770_1'
     - id: interpreter
-      video: '3830_1'
       web: 'http://www.auslan.org.au/dictionary/words/interpreter-1.html'
+      video: '3830_1'
     - id: people
-      video: '5350'
       web: 'http://www.auslan.org.au/dictionary/words/people-1.html'
+      video: '5350'
