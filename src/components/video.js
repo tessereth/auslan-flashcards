@@ -54,7 +54,7 @@ class Video extends React.PureComponent {
     return (
       <video
         id={`flashcard-video-${word.id}`}
-        className="video-js vjs-fill"
+        className="video-js image is-4by3 vjs-big-play-centered"
         poster={`${mediaPath(word.video)}.jpg`}
         ref={this.videoRef}
         autoPlay={revealed}

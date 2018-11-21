@@ -23,19 +23,16 @@ $subtitle-padding-top: ($card-max-height - $subtitle-size * $subtitle-line-heigh
 }
 
 .flashcard__content {
-  margin-left: auto;
-  margin-right: auto;
-
   @media (min-width: $tablet) {
+    margin-left: auto;
+    margin-right: auto;
+
     width: $card-max-width;
     height: $card-max-height;
   }
 }
 
 .flashcard__content--video {
-  width: 12rem;
-  height: 9rem;
-
   @media (min-width: $tablet) {
     width: $card-max-width;
     height: $card-max-height;
@@ -60,6 +57,12 @@ $diff-title-subtitle-size: ($title-size * $title-line-height) - ($subtitle-size 
     padding-top: $subtitle-padding-top;
     padding-bottom: 0;
   }
+}
+
+// support videos inside .image, not just <img>
+.video-js.image {
+  height: auto;
+  width: 100%;
 }
 
 // support button.box as well as a.box
