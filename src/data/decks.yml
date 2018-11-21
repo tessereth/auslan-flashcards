@@ -297,6 +297,183 @@
     - id: baby
       web: 'http://www.auslan.org.au/dictionary/words/baby-1.html'
       video: '38160'
+- name: Extended family
+  words:
+    - id: grandmother
+      web: 'http://www.auslan.org.au/dictionary/words/grandmother-2.html'
+      video: '58100_1'
+    - id: grandfather
+      web: 'http://www.auslan.org.au/dictionary/words/grandfather-1.html'
+      video: '58110_1'
+    - id: aunty
+      web: 'http://www.auslan.org.au/dictionary/words/aunt-1.html'
+      video: '48370_1'
+    - id: uncle
+      web: 'http://www.auslan.org.au/dictionary/words/uncle-1.html'
+      video: '50070_1'
+    - id: niece
+      web: 'http://www.auslan.org.au/dictionary/words/niece-1.html'
+      video: '19150_1'
+    - id: nephew
+      web: 'http://www.auslan.org.au/dictionary/words/nephew-1.html'
+      video: '19470_1'
+    - id: cousin
+      web: 'http://www.auslan.org.au/dictionary/words/cousin-1.html'
+      video: '44930'
+- name: Colours
+  words:
+    - id: colour
+      web: 'http://www.auslan.org.au/dictionary/words/colour-3.html'
+      video: 'http://media.auslan.org.au/mp4video/Gloss/11/1175'
+    - id: blue
+      web: 'http://www.auslan.org.au/dictionary/words/blue-2.html'
+      video: '18480_1'
+    - id: yellow
+      web: 'http://www.auslan.org.au/dictionary/words/yellow-1.html'
+      video: '2480_1'
+    - id: grey
+      web: 'http://www.auslan.org.au/dictionary/words/grey-1.html'
+      video: '32320_1'
+    - id: pink
+      web: 'http://www.auslan.org.au/dictionary/words/pink-1.html'
+      video: '5920_1'
+    - id: red
+      web: 'http://www.auslan.org.au/dictionary/words/red-2.html'
+      video: '14110'
+    - id: green
+      web: 'http://www.auslan.org.au/dictionary/words/green-2.html'
+      video: '65660_1'
+    - id: brown
+      web: 'http://www.auslan.org.au/dictionary/words/brown-1.html'
+      video: '32650'
+    - id: black
+      web: 'http://www.auslan.org.au/dictionary/words/black-2.html'
+      video: '55930_1'
+    - id: purple
+      web: 'http://www.auslan.org.au/dictionary/words/purple-1.html'
+      video: '21480_1'
+    - id: white
+      web: 'http://www.auslan.org.au/dictionary/words/white-2.html'
+      video: '2950_1'
+    - id: orange
+      web: 'http://www.auslan.org.au/dictionary/words/orange-1.html'
+      video: '440_1'
+    - id: dark
+      web: 'http://www.auslan.org.au/dictionary/words/dark-1.html'
+      video: '17540'
+    - id: light
+      web: 'http://www.auslan.org.au/dictionary/words/light-5.html'
+      video: '64590_1'
+- name: Food & drink
+  words:
+    - id: eat
+      web: 'http://www.auslan.org.au/dictionary/words/eat-2.html'
+      video: '500_1'
+    - id: hungry
+      web: 'http://www.auslan.org.au/dictionary/words/hungry-1.html'
+      video: '39420_1'
+    - id: banana
+      web: 'http://www.auslan.org.au/dictionary/words/banana-2.html'
+      video: '52220_1'
+    - id: orange
+      web: 'http://www.auslan.org.au/dictionary/words/orange-1.html'
+      video: '440_1'
+    - id: apple
+      web: 'http://www.auslan.org.au/dictionary/words/apple-2.html'
+      video: 'http://media.auslan.org.au/mp4video/51/51220'
+    - id: watermelon
+      web: 'http://www.auslan.org.au/dictionary/words/watermelon-1.html'
+      video: '45730_1'
+    - id: salad
+      web: 'http://www.auslan.org.au/dictionary/words/salad-1.html'
+      video: '27960'
+    - id: sandwich
+      web: 'http://www.auslan.org.au/dictionary/words/sandwich-1.html'
+      video: '44440_1'
+    - id: pork
+      web: 'http://www.auslan.org.au/dictionary/words/pork-1.html'
+      video: '55730_1'
+    - id: meat
+      web: 'http://www.auslan.org.au/dictionary/words/meat-2.html'
+      video: '6510_1'
+    - id: fish
+      web: 'http://www.auslan.org.au/dictionary/words/fish-2.html'
+      video: '24740'
+    - id: chicken
+      web: 'http://www.auslan.org.au/dictionary/words/chicken-1.html'
+      video: '51190_1'
+    - id: thirsty
+      web: 'http://www.auslan.org.au/dictionary/words/thirsty-2.html'
+      video: '6580_1'
+    - id: water
+      web: 'http://www.auslan.org.au/dictionary/words/water-1.html'
+      video: '32530_1'
+    - id: drink
+      web: 'http://www.auslan.org.au/dictionary/words/drink-1.html'
+      video: '44870_1'
+    - id: soft-drink
+      title: soft drink
+      web: 'http://www.auslan.org.au/dictionary/words/soft%20drink-1.html'
+      video: '4230'
+    - id: coffee
+      web: 'http://www.auslan.org.au/dictionary/words/coffee-2.html'
+      video: '58190_1'
+    - id: milk
+      web: 'http://www.auslan.org.au/dictionary/words/milk-1.html'
+      video: '27040_1'
+    - id: sugar
+      web: 'http://www.auslan.org.au/dictionary/words/sugar-2.html'
+      video: '19920_1'
+    - id: biscuit
+      web: 'http://www.auslan.org.au/dictionary/words/biscuit-2.html'
+      video: '49100_1'
+    - id: cake
+      web: 'http://www.auslan.org.au/dictionary/words/cake-1.html'
+      video: '30810_1'
+- name: Date & time
+  words:
+    - id: today
+      web: 'http://www.auslan.org.au/dictionary/words/today-2.html'
+      video: '7080_1'
+    - id: tomorrow
+      web: 'http://www.auslan.org.au/dictionary/words/tomorrow-1.html'
+      video: '5900_1'
+    - id: yesterday
+      web: 'http://www.auslan.org.au/dictionary/words/yesterday-2.html'
+      video: '47280_1'
+    - id: morning
+      web: 'http://www.auslan.org.au/dictionary/words/morning-1.html'
+      video: '34770'
+    - id: afternoon
+      web: 'http://www.auslan.org.au/dictionary/words/afternoon-1.html'
+      video: '24480_1'
+    - id: day
+      web: 'http://www.auslan.org.au/dictionary/words/day-1.html'
+      video: '37080_1'
+    - id: night
+      web: 'http://www.auslan.org.au/dictionary/words/night-1.html'
+      video: '35490'
+    - id: breakfast
+      web: 'http://www.auslan.org.au/dictionary/words/breakfast-4.html'
+      video: '21600_1'
+    - id: lunch
+      web: 'http://www.auslan.org.au/dictionary/words/lunch-1.html'
+      video: '44440_1'
+    - id: dinner
+      web: 'http://www.auslan.org.au/dictionary/words/dinner-1.html'
+      video: '14070_1'
+    - id: appointment
+      web: 'http://www.auslan.org.au/dictionary/words/appointment-1.html'
+      video: '48340_1'
+    - id: calendar
+      web: 'http://www.auslan.org.au/dictionary/words/calendar-1.html'
+      video: '46860'
+    - id: future
+      web: 'http://www.auslan.org.au/dictionary/words/future-1.html'
+      video: '44790'
+    - id: past
+      web: 'http://www.auslan.org.au/dictionary/words/past-3.html'
+      video: '32050'
 - name: Little words 1
   words:
     - id: same
