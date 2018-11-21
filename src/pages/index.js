@@ -29,7 +29,9 @@ const IndexPage = ({ data }) => {
           {data.allDecksYaml.edges.map(deck => (
             <div key={deck.node.fields.slug} className="box">
               <div className="level">
-                <div className="level-left">{deck.node.name}</div>
+                <div className="level-left">
+                  <Link to={deck.node.fields.slug}>{deck.node.name}</Link>
+                </div>
                 <div className="level-right">
                   <div className="buttons">
                     <Link
@@ -43,9 +45,6 @@ const IndexPage = ({ data }) => {
                       className="button"
                     >
                       Guess word
-                    </Link>
-                    <Link to={deck.node.fields.slug} className="button">
-                      View all
                     </Link>
                   </div>
                 </div>

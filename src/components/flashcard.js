@@ -13,16 +13,30 @@ const WordCard = ({ word, revealed }) => (
 
 const VideoCard = ({ word, revealed }) => (
   <div className={classnames('flashcard', { 'flashcard--hidden': !revealed })}>
-    <div className="flashcard__content flashcard__content--video">
+    <div className="flashcard__content">
       <Video word={word} revealed={revealed} />
     </div>
   </div>
 )
 
-const HiddenCard = ({ reveal }) => (
+const HiddenWordCard = ({ reveal }) => (
   <button className="flashcard flashcard--reveal" onClick={reveal}>
-    <div className="flashcard__content flashcard__content--reveal">
-      <p className="subtitle">Reveal</p>
+    <div className="flashcard__content">
+      <div className="af-reveal--word">
+        <p className="subtitle">reveal</p>
+      </div>
+    </div>
+  </button>
+)
+
+const HiddenVideoCard = ({ reveal }) => (
+  <button className="flashcard flashcard--reveal" onClick={reveal}>
+    <div className="flashcard__content">
+      <div className="image is-4by3">
+        <div className="af-reveal--video">
+          <p className="subtitle">reveal</p>
+        </div>
+      </div>
     </div>
   </button>
 )
@@ -39,11 +53,16 @@ const Flashcard = ({ word, wordFirst, revealed, reveal }) => {
       </div>
       <div className="column is-centered">
         {wordFirst ? (
-          <VideoCard word={word} revealed={revealed} />
+          <>
+            <VideoCard word={word} revealed={revealed} />
+            {!revealed && <HiddenVideoCard reveal={reveal} />}
+          </>
         ) : (
-          <WordCard word={word} revealed={revealed} />
+          <>
+            <WordCard word={word} revealed={revealed} />
+            {!revealed && <HiddenWordCard reveal={reveal} />}
+          </>
         )}
-        {!revealed && <HiddenCard reveal={reveal} />}
       </div>
     </div>
   )
