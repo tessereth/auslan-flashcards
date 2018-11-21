@@ -5,7 +5,6 @@ import { shuffle } from 'shuffle-seed'
 
 import Layout from '../components/layout'
 import Flashcard from '../components/flashcard'
-import TitleBar from '../components/title-bar'
 import FlashcardTitleBar from './flashcard-title-bar'
 
 class FlashcardScene extends React.PureComponent {
