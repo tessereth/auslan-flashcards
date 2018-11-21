@@ -1,1 +1,0 @@
-{"errors":[{"message":"Expected Iterable, but did not find one for field DecksYaml.words.","locations":[{"line":6,"column":5}],"path":["decksYaml","words"]}],"data":{"decksYaml":{"name":"tmp","words":null}},"pageContext":{"slug":"tmp","guess":"word"}}
